@@ -1,0 +1,10 @@
+/* 
+  ConnectionAlertLocalizable.strings
+  App
+
+  Created by MGAbouarab on 14/01/2024.
+  
+*/
+
+"Application_Not_connected_To_Internet" = "تم فقدان الإتصال بالإنترنت";
+"Internet_Connection_Restored" = "تم إستعادة الإتصال بالإنترنت";

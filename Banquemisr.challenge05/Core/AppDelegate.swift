@@ -6,14 +6,32 @@
 //
 
 import UIKit
+import Network
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    //MARK: - Properties -
+    let reachability: Reachability = Reachability()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.startObserveNetworkChange()
+        
+        let monitor = NWPathMonitor()
+        let queue = DispatchQueue(label: "NetworkMonitor")
+        monitor.start(queue: queue)
+        
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                DispatchQueue.main.async {
+                    queue.suspend()
+                }
+            } else {
+                print("No network connection")
+            }
+        }
+        
         return true
     }
 
@@ -34,3 +52,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+
+extension AppDelegate {
+    
+    //MARK: - Networking -
+    private func startObserveNetworkChange() {
+        reachability.listen { [weak self] status in
+            switch status {
+            case .unknown:
+                break
+            case .notReachable:
+                ConnectionAlertManager.shared.showConnectionLost()
+            case .reachable(_):
+                guard self?.reachability.lastStatus == .notReachable else {return}
+                ConnectionAlertManager.shared.showConnectionRestored()
+            }
+        }
+    }
+    
+}
