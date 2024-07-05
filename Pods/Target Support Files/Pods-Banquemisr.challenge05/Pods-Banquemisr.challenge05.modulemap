@@ -1,0 +1,6 @@
+framework module Pods_Banquemisr_challenge05 {
+  umbrella header "Pods-Banquemisr.challenge05-umbrella.h"
+
+  export *
+  module * { export * }
+}

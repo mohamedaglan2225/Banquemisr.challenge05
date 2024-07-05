@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Banquemisr_challenge05_Banquemisr_challenge05UITests : NSObject
+@end
+@implementation PodsDummy_Pods_Banquemisr_challenge05_Banquemisr_challenge05UITests
+@end

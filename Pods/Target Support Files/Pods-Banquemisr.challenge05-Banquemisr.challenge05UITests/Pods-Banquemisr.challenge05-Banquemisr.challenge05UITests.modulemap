@@ -1,0 +1,6 @@
+framework module Pods_Banquemisr_challenge05_Banquemisr_challenge05UITests {
+  umbrella header "Pods-Banquemisr.challenge05-Banquemisr.challenge05UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
