@@ -6,6 +6,8 @@ target 'Banquemisr.challenge05' do
   use_frameworks!
 
   # Pods for Banquemisr.challenge05
+pod 'Alamofire', '~> 5.2'
+pod 'Kingfisher', '~> 6.0'
 
   target 'Banquemisr.challenge05Tests' do
     inherit! :search_paths

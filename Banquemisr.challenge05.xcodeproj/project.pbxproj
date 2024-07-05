@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20C1EDAB5B5AB3F6FD4FBD2B /* Pods_Banquemisr_challenge05_Banquemisr_challenge05UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47659E63DD12BB76880DD019 /* Pods_Banquemisr_challenge05_Banquemisr_challenge05UITests.framework */; };
+		382EFBAF2C3877890039080A /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382EFBAE2C3877890039080A /* Collection.swift */; };
 		38A7A0572C3875200084B4A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0562C3875200084B4A7 /* AppDelegate.swift */; };
 		38A7A0592C3875200084B4A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0582C3875200084B4A7 /* SceneDelegate.swift */; };
 		38A7A05B2C3875200084B4A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A05A2C3875200084B4A7 /* ViewController.swift */; };
@@ -17,6 +18,20 @@
 		38A7A06E2C3875210084B4A7 /* Banquemisr_challenge05Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A06D2C3875210084B4A7 /* Banquemisr_challenge05Tests.swift */; };
 		38A7A0782C3875210084B4A7 /* Banquemisr_challenge05UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0772C3875210084B4A7 /* Banquemisr_challenge05UITests.swift */; };
 		38A7A07A2C3875210084B4A7 /* Banquemisr_challenge05UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0792C3875210084B4A7 /* Banquemisr_challenge05UITestsLaunchTests.swift */; };
+		38A7A0992C3877080084B4A7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0872C3877080084B4A7 /* BaseResponse.swift */; };
+		38A7A09A2C3877080084B4A7 /* ServerResponseKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0882C3877080084B4A7 /* ServerResponseKey.swift */; };
+		38A7A09B2C3877080084B4A7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A08A2C3877080084B4A7 /* Endpoint.swift */; };
+		38A7A09C2C3877080084B4A7 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A08B2C3877080084B4A7 /* Requestable.swift */; };
+		38A7A09D2C3877080084B4A7 /* RequestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A08C2C3877080084B4A7 /* RequestHeader.swift */; };
+		38A7A09E2C3877080084B4A7 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A08D2C3877080084B4A7 /* Typealias.swift */; };
+		38A7A09F2C3877080084B4A7 /* UploadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A08E2C3877080084B4A7 /* UploadData.swift */; };
+		38A7A0A02C3877080084B4A7 /* DefaultNetworkExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0902C3877080084B4A7 /* DefaultNetworkExecuter.swift */; };
+		38A7A0A12C3877080084B4A7 /* NetworkExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0912C3877080084B4A7 /* NetworkExecuter.swift */; };
+		38A7A0A22C3877080084B4A7 /* ResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0922C3877080084B4A7 /* ResponseDecoder.swift */; };
+		38A7A0A32C3877080084B4A7 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0932C3877080084B4A7 /* ResponseError.swift */; };
+		38A7A0A42C3877080084B4A7 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0942C3877080084B4A7 /* ResponseHandler.swift */; };
+		38A7A0A52C3877080084B4A7 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0962C3877080084B4A7 /* NetworkConstants.swift */; };
+		38A7A0A62C3877080084B4A7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0972C3877080084B4A7 /* Reachability.swift */; };
 		895CF5DD9CCF5251D4631A41 /* Pods_Banquemisr_challenge05Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE0C59952FECCAEDD858B4C /* Pods_Banquemisr_challenge05Tests.framework */; };
 		AC8D895B8E2725AEE13BFEA1 /* Pods_Banquemisr_challenge05.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3ED7B07B257C6524411C087 /* Pods_Banquemisr_challenge05.framework */; };
 /* End PBXBuildFile section */
@@ -39,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		382EFBAE2C3877890039080A /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		38A7A0532C3875200084B4A7 /* Banquemisr.challenge05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banquemisr.challenge05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A7A0562C3875200084B4A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38A7A0582C3875200084B4A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +68,20 @@
 		38A7A0732C3875210084B4A7 /* Banquemisr.challenge05UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Banquemisr.challenge05UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A7A0772C3875210084B4A7 /* Banquemisr_challenge05UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banquemisr_challenge05UITests.swift; sourceTree = "<group>"; };
 		38A7A0792C3875210084B4A7 /* Banquemisr_challenge05UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banquemisr_challenge05UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38A7A0872C3877080084B4A7 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		38A7A0882C3877080084B4A7 /* ServerResponseKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerResponseKey.swift; sourceTree = "<group>"; };
+		38A7A08A2C3877080084B4A7 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		38A7A08B2C3877080084B4A7 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		38A7A08C2C3877080084B4A7 /* RequestHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHeader.swift; sourceTree = "<group>"; };
+		38A7A08D2C3877080084B4A7 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		38A7A08E2C3877080084B4A7 /* UploadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadData.swift; sourceTree = "<group>"; };
+		38A7A0902C3877080084B4A7 /* DefaultNetworkExecuter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultNetworkExecuter.swift; sourceTree = "<group>"; };
+		38A7A0912C3877080084B4A7 /* NetworkExecuter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkExecuter.swift; sourceTree = "<group>"; };
+		38A7A0922C3877080084B4A7 /* ResponseDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDecoder.swift; sourceTree = "<group>"; };
+		38A7A0932C3877080084B4A7 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		38A7A0942C3877080084B4A7 /* ResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
+		38A7A0962C3877080084B4A7 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		38A7A0972C3877080084B4A7 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		47659E63DD12BB76880DD019 /* Pods_Banquemisr_challenge05_Banquemisr_challenge05UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Banquemisr_challenge05_Banquemisr_challenge05UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCF5630E54E991A64BA3E4 /* Pods-Banquemisr.challenge05-Banquemisr.challenge05UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banquemisr.challenge05-Banquemisr.challenge05UITests.debug.xcconfig"; path = "Target Support Files/Pods-Banquemisr.challenge05-Banquemisr.challenge05UITests/Pods-Banquemisr.challenge05-Banquemisr.challenge05UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		61318C892FE514AC2FFFD4F5 /* Pods-Banquemisr.challenge05Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banquemisr.challenge05Tests.debug.xcconfig"; path = "Target Support Files/Pods-Banquemisr.challenge05Tests/Pods-Banquemisr.challenge05Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +121,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		382EFBB02C38780E0039080A /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				38A7A05F2C3875210084B4A7 /* Assets.xcassets */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		382EFBB12C3878230039080A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				38A7A0612C3875210084B4A7 /* LaunchScreen.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		382EFBB22C38782C0039080A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				38A7A05A2C3875200084B4A7 /* ViewController.swift */,
+				38A7A05C2C3875200084B4A7 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		38A7A04A2C3875200084B4A7 = {
 			isa = PBXGroup;
 			children = (
@@ -116,13 +171,11 @@
 		38A7A0552C3875200084B4A7 /* Banquemisr.challenge05 */ = {
 			isa = PBXGroup;
 			children = (
-				38A7A0562C3875200084B4A7 /* AppDelegate.swift */,
-				38A7A0582C3875200084B4A7 /* SceneDelegate.swift */,
-				38A7A05A2C3875200084B4A7 /* ViewController.swift */,
-				38A7A05C2C3875200084B4A7 /* Main.storyboard */,
-				38A7A05F2C3875210084B4A7 /* Assets.xcassets */,
-				38A7A0612C3875210084B4A7 /* LaunchScreen.storyboard */,
-				38A7A0642C3875210084B4A7 /* Info.plist */,
+				38A7A0862C3876F90084B4A7 /* Core */,
+				382EFBB02C38780E0039080A /* Themes */,
+				38A7A0982C3877080084B4A7 /* Networking */,
+				382EFBB12C3878230039080A /* Splash */,
+				382EFBB22C38782C0039080A /* App */,
 			);
 			path = Banquemisr.challenge05;
 			sourceTree = "<group>";
@@ -144,6 +197,62 @@
 			path = Banquemisr.challenge05UITests;
 			sourceTree = "<group>";
 		};
+		38A7A0862C3876F90084B4A7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				38A7A0562C3875200084B4A7 /* AppDelegate.swift */,
+				38A7A0582C3875200084B4A7 /* SceneDelegate.swift */,
+				38A7A0642C3875210084B4A7 /* Info.plist */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		38A7A0892C3877080084B4A7 /* BaseResponse */ = {
+			isa = PBXGroup;
+			children = (
+				38A7A0872C3877080084B4A7 /* BaseResponse.swift */,
+				38A7A0882C3877080084B4A7 /* ServerResponseKey.swift */,
+			);
+			path = BaseResponse;
+			sourceTree = "<group>";
+		};
+		38A7A08F2C3877080084B4A7 /* HandelRequest */ = {
+			isa = PBXGroup;
+			children = (
+				382EFBAE2C3877890039080A /* Collection.swift */,
+				38A7A08A2C3877080084B4A7 /* Endpoint.swift */,
+				38A7A08B2C3877080084B4A7 /* Requestable.swift */,
+				38A7A08C2C3877080084B4A7 /* RequestHeader.swift */,
+				38A7A08D2C3877080084B4A7 /* Typealias.swift */,
+				38A7A08E2C3877080084B4A7 /* UploadData.swift */,
+			);
+			path = HandelRequest;
+			sourceTree = "<group>";
+		};
+		38A7A0952C3877080084B4A7 /* HandleResponse */ = {
+			isa = PBXGroup;
+			children = (
+				38A7A0902C3877080084B4A7 /* DefaultNetworkExecuter.swift */,
+				38A7A0912C3877080084B4A7 /* NetworkExecuter.swift */,
+				38A7A0922C3877080084B4A7 /* ResponseDecoder.swift */,
+				38A7A0932C3877080084B4A7 /* ResponseError.swift */,
+				38A7A0942C3877080084B4A7 /* ResponseHandler.swift */,
+			);
+			path = HandleResponse;
+			sourceTree = "<group>";
+		};
+		38A7A0982C3877080084B4A7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				38A7A0892C3877080084B4A7 /* BaseResponse */,
+				38A7A08F2C3877080084B4A7 /* HandelRequest */,
+				38A7A0952C3877080084B4A7 /* HandleResponse */,
+				38A7A0962C3877080084B4A7 /* NetworkConstants.swift */,
+				38A7A0972C3877080084B4A7 /* Reachability.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		7C1637B75F3CA770B640B659 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +263,6 @@
 				61318C892FE514AC2FFFD4F5 /* Pods-Banquemisr.challenge05Tests.debug.xcconfig */,
 				ABE676F0C7F7FBBE68897CCD /* Pods-Banquemisr.challenge05Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -179,6 +287,7 @@
 				38A7A04F2C3875200084B4A7 /* Sources */,
 				38A7A0502C3875200084B4A7 /* Frameworks */,
 				38A7A0512C3875200084B4A7 /* Resources */,
+				C1021EF2C57E9A0C7BDE67AE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,6 +509,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C1021EF2C57E9A0C7BDE67AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Banquemisr.challenge05/Pods-Banquemisr.challenge05-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Banquemisr.challenge05/Pods-Banquemisr.challenge05-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Banquemisr.challenge05/Pods-Banquemisr.challenge05-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -407,9 +533,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A7A09D2C3877080084B4A7 /* RequestHeader.swift in Sources */,
+				38A7A09E2C3877080084B4A7 /* Typealias.swift in Sources */,
 				38A7A05B2C3875200084B4A7 /* ViewController.swift in Sources */,
+				38A7A0A02C3877080084B4A7 /* DefaultNetworkExecuter.swift in Sources */,
+				38A7A09C2C3877080084B4A7 /* Requestable.swift in Sources */,
+				38A7A09F2C3877080084B4A7 /* UploadData.swift in Sources */,
+				38A7A0A62C3877080084B4A7 /* Reachability.swift in Sources */,
+				38A7A09A2C3877080084B4A7 /* ServerResponseKey.swift in Sources */,
 				38A7A0572C3875200084B4A7 /* AppDelegate.swift in Sources */,
+				382EFBAF2C3877890039080A /* Collection.swift in Sources */,
+				38A7A0A52C3877080084B4A7 /* NetworkConstants.swift in Sources */,
+				38A7A0A42C3877080084B4A7 /* ResponseHandler.swift in Sources */,
 				38A7A0592C3875200084B4A7 /* SceneDelegate.swift in Sources */,
+				38A7A09B2C3877080084B4A7 /* Endpoint.swift in Sources */,
+				38A7A0A22C3877080084B4A7 /* ResponseDecoder.swift in Sources */,
+				38A7A0992C3877080084B4A7 /* BaseResponse.swift in Sources */,
+				38A7A0A12C3877080084B4A7 /* NetworkExecuter.swift in Sources */,
+				38A7A0A32C3877080084B4A7 /* ResponseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,8 +734,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69J7L8UL9S;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Banquemisr.challenge05/Info.plist;
+				INFOPLIST_FILE = Banquemisr.challenge05/Core/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -622,8 +764,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69J7L8UL9S;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Banquemisr.challenge05/Info.plist;
+				INFOPLIST_FILE = Banquemisr.challenge05/Core/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
