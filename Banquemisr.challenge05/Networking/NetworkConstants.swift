@@ -11,6 +11,6 @@ struct NetworkConstants {
     private init() {}
     static let domain = "https://api.themoviedb.org"
     static var server: String {
-        return domain + "/api/"
+        return domain + ""
     }
 }

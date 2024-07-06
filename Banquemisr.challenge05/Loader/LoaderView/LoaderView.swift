@@ -39,7 +39,7 @@ final class LoaderView: UIView {
     
     //MARK: - Design -
     private func setupInitialDesign() {
-        self.layer.cornerRadius = .cardCorner
+        self.layer.cornerRadius = 8
         self.clipsToBounds = true
     }
     

@@ -2,7 +2,7 @@
 //  AlertManger.swift
 //  App
 //
-//  Created by MGAbouarab on 12/01/2024.
+//  Created by Mohamed Aglan on 5/07/2024.
 //
 
 import UIKit

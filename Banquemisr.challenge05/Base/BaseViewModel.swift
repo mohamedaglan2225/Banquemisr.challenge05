@@ -27,8 +27,8 @@ class BaseViewModel: NSObject, ObservableObject {
         case .fail:
             throw ResponseError.server(message: response.message)
         case .unauthenticated, .blocked:
-            let vc = await LoginView()
-            AppHelper.changeWindowRoot(vc: vc)
+//            let vc = await LoginView()
+//            AppHelper.changeWindowRoot(vc: vc)
             return nil
         case .needActive:
             return response.data
@@ -38,6 +38,10 @@ class BaseViewModel: NSObject, ObservableObject {
         
     }
     func requestFullResponse<ResponseData: Decodable>(_ endPoint: Endpoint<BaseResponse<ResponseData>>, progress: ((_ progress: Int)-> Void)? = nil) async throws -> BaseResponse<ResponseData> {
+        return try await self.responseHandler.get(endPoint, progress: progress)
+    }
+   
+    func requestGeneralResponse<ResponseData: Decodable>(_ endPoint: Endpoint<ResponseData>, progress: ((_ progress: Int)-> Void)? = nil) async throws -> ResponseData {
         return try await self.responseHandler.get(endPoint, progress: progress)
     }
     

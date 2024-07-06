@@ -2,7 +2,7 @@
 //  ConnectionAlertManager.swift
 //  App
 //
-//  Created by MGAbouarab on 14/01/2024.
+//  Created by Mohamed Aglan on 5/07/2024.
 //
 
 import UIKit
@@ -30,14 +30,14 @@ class ConnectionAlertManager {
     func showConnectionLost() {
         let image = UIImage(systemName: "wifi.exclamationmark")?.withTintColor(.secondaryLabel, renderingMode: .alwaysOriginal)
         ConnectionAlertManager.shared.show(
-            message: "Application_Not_connected_To_Internet".connectionAlertLocalizable,
+            message: "Application_Not_connected_To_Internet",
             type: .image(image),
             isFixed: true
         )
     }
     func showConnectionRestored() {
         ConnectionAlertManager.shared.show(
-            message: "Internet_Connection_Restored".connectionAlertLocalizable,
+            message: "Internet_Connection_Restored",
             type: .image(.init(systemName: "wifi")),
             isFixed: false
         )

@@ -2,7 +2,7 @@
 //  TopAlert.swift
 //  App
 //
-//  Created by MGAbouarab on 12/01/2024.
+//  Created by Mohamed Aglan on 5/07/2024.
 //
 
 import UIKit
@@ -47,9 +47,9 @@ class TopAlert: UIView {
     
     //MARK: - Design -
     private func setupInitialDesign() {
-        self.layer.cornerRadius = .cardCorner
+        self.layer.cornerRadius = 8
         self.clipsToBounds = true
-        self.tintColor = .main
+        self.tintColor = .blue
     }
     
     //MARK: - Data -

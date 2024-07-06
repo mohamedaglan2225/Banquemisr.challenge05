@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.startObserveNetworkChange()
         
+        self.setToken()
+        
         let monitor = NWPathMonitor()
         let queue = DispatchQueue(label: "NetworkMonitor")
         monitor.start(queue: queue)
@@ -69,6 +71,10 @@ extension AppDelegate {
                 ConnectionAlertManager.shared.showConnectionRestored()
             }
         }
+    }
+    
+    private func setToken() {
+        UserDefaults.accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmN2JiMjJkY2FlM2RhOWFjZTNkOWVkYzk1MWNmYWQzYSIsIm5iZiI6MTcyMDIwNzMyMS4xODQ2MDgsInN1YiI6IjY2ODg0NzBkMDY5MjYyNDQ5YzNiNGU1ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MBX7X1Wora912iJhNuLfPNgJnJEOtrx5V5Q6OOeKCiM"
     }
     
 }

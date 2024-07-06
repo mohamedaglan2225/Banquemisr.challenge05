@@ -41,11 +41,9 @@ class AppTabBarController: UITabBarController {
     }
     private func addChilds() {
         self.viewControllers = [
-            home(),
-            notification(),
-            addAds(),
-            chat(),
-            account()
+            nowPlayingMoviesTapBar(),
+            popularMoviesTapBar(),
+            upcomingMoviesTabBar()
         ]
     }
     private func setupDesign() {
@@ -90,42 +88,26 @@ class AppTabBarController: UITabBarController {
     }
     
     //MARK: - Doctors VCs -
-    func home() -> UINavigationController {
-//        let vc = AppStoryboards.tabBar.instantiate(HomeTabBarViewController.self)
-//        vc.tabBarItem = UITabBarItem(title: "Home".localized, image: UIImage(named: "Home"), selectedImage: UIImage(named: "SelectedHome"))
-//        vc.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
-//        return ColoredNav(rootViewController: vc)
-        return UINavigationController()
-    }
-    func notification() -> UINavigationController {
-//        let vc = AppStoryboards.tabBar.instantiate(OrdersTabBarController.self)
-//        vc.tabBarItem = UITabBarItem(title: "Orders".localized, image: UIImage(named: "Orders"), selectedImage: UIImage(named: "SelectedOrder"))
-//        vc.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
-//        return BaseNav(rootViewController: vc)
-        return UINavigationController()
-    }
-    func addAds() -> UINavigationController {
-//        let vc = AppStoryboards.tabBar.instantiate(ClinicsTabBarViewController.self)
-//        vc.tabBarItem = UITabBarItem(title: "Clinics".localized, image: UIImage(named: "Clinic"), selectedImage: UIImage(named: "SelectedClinic"))
-//        vc.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
-//        return BaseNav(rootViewController: vc)
-        return UINavigationController()
-    }
-    func chat() -> UINavigationController {
-//        let vc = AppStoryboards.tabBar.instantiate(CartTabBarViewController.self)
-//        vc.tabBarItem = UITabBarItem(title: "Cart".localized, image: UIImage(named: "Cart"), selectedImage: UIImage(named: "SelectedCart"))
-//        vc.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
-//        return BaseNav(rootViewController: vc)
-        return UINavigationController()
-    }
-    func account() -> UINavigationController {
-//        let vc = AppStoryboards.tabBar.instantiate(MoreTabBarViewController.self)
-//        vc.tabBarItem = UITabBarItem(title: "More".localized, image: UIImage(named: "More"), selectedImage: UIImage(named: "SelectedMore"))
-//        vc.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
-//        return BaseNav(rootViewController: vc)
-        return UINavigationController()
+    func nowPlayingMoviesTapBar() -> UINavigationController {
+        let vc = NowPlayingMoviesView()
+        vc.tabBarItem = UITabBarItem(title: "Now Playing", image: UIImage(named: "watch"), selectedImage: UIImage(named: "watch"))
+        vc.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
+        vc.title = "Now Playing"
+        return ColoredNav(rootViewController: vc)
     }
     
+    func popularMoviesTapBar() -> UINavigationController {
+        let vc = PopularMoviesView()
+        vc.tabBarItem = UITabBarItem(title: "Popular", image: UIImage(named: "media"), selectedImage: UIImage(named: "media"))
+        vc.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
+        return BaseNav(rootViewController: vc)
+    }
+    func upcomingMoviesTabBar() -> UINavigationController {
+        let vc = UpcomingMoviesView()
+        vc.tabBarItem = UITabBarItem(title: "Upcoming", image: UIImage(named: "DashBoard"), selectedImage: UIImage(named: "DashBoard"))
+        vc.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
+        return BaseNav(rootViewController: vc)
+    }
     
 }
 extension AppTabBarController: UITabBarControllerDelegate {

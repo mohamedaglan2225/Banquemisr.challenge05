@@ -8,18 +8,23 @@ target 'Banquemisr.challenge05' do
   # Pods for Banquemisr.challenge05
 pod 'Alamofire', '~> 5.2'
 pod 'Kingfisher', '~> 6.0'
+pod 'lottie-ios'
 
   target 'Banquemisr.challenge05Tests' do
     inherit! :search_paths
     # Pods for testing
 pod 'Alamofire', '~> 5.2'
 pod 'Kingfisher', '~> 6.0'
+pod 'lottie-ios'
+
   end
 
   target 'Banquemisr.challenge05UITests' do
     # Pods for testing
 pod 'Alamofire', '~> 5.2'
 pod 'Kingfisher', '~> 6.0'
+pod 'lottie-ios'
+
   end
 
 end
