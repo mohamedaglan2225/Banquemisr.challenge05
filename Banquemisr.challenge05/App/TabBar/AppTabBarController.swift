@@ -107,6 +107,7 @@ class AppTabBarController: UITabBarController {
         let vc = UpcomingMoviesView()
         vc.tabBarItem = UITabBarItem(title: "Upcoming", image: UIImage(named: "DashBoard"), selectedImage: UIImage(named: "DashBoard"))
         vc.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
+        vc.title = "Upcoming Movies"
         return BaseNav(rootViewController: vc)
     }
     

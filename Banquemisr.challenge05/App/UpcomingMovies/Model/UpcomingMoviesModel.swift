@@ -1,5 +1,5 @@
 //
-//  NowPlayingModel.swift
+//  UpcomingMoviesModel.swift
 //  Banquemisr.challenge05
 //
 //  Created by Mohamed Aglan on 7/6/24.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-// MARK: - NowPlayingModel
-struct NowPlayingModel: Codable {
+// MARK: - UpcomingMoviesModel
+struct UpcomingMoviesModel: Codable {
     var dates: Dates?
     var page: Int
-    var results: [NowPlayingModelResult]?
+    var results: [UpcomingMoviesResult]?
     var totalPages, totalResults: Int
 
     enum CodingKeys: String, CodingKey {
@@ -21,18 +21,14 @@ struct NowPlayingModel: Codable {
     }
 }
 
-// MARK: - Dates
-struct Dates: Codable {
-    var maximum, minimum: String?
-}
-
-// MARK: - Result
-struct NowPlayingModelResult: Codable {
+// MARK: - UpcomingMoviesResult
+struct UpcomingMoviesResult: Codable {
     var adult: Bool?
     var backdropPath: String?
     var genreIDS: [Int]?
     var id: Int?
-    var originalLanguage, originalTitle, overview: String?
+    var originalLanguage: OriginalLanguage?
+    var originalTitle, overview: String?
     var popularity: Double?
     var posterPath, releaseDate, title: String
     var video: Bool?
@@ -53,5 +49,11 @@ struct NowPlayingModelResult: Codable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
-    
+}
+
+enum OriginalLanguage: String, Codable {
+    case en = "en"
+    case es = "es"
+    case tl = "tl"
+    case zh = "zh"
 }

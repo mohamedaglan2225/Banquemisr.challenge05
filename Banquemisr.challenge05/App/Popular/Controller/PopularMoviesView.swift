@@ -30,7 +30,6 @@ class PopularMoviesView: BaseViewController {
         registerCell()
         callApis()
         binding()
-        
     }
     
     
