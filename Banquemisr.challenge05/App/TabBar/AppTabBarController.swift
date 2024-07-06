@@ -100,6 +100,7 @@ class AppTabBarController: UITabBarController {
         let vc = PopularMoviesView()
         vc.tabBarItem = UITabBarItem(title: "Popular", image: UIImage(named: "media"), selectedImage: UIImage(named: "media"))
         vc.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
+        vc.title = "Popular Movies"
         return BaseNav(rootViewController: vc)
     }
     func upcomingMoviesTabBar() -> UINavigationController {
