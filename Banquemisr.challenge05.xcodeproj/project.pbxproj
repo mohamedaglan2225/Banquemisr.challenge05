@@ -36,7 +36,7 @@
 		38A7A0592C3875200084B4A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0582C3875200084B4A7 /* SceneDelegate.swift */; };
 		38A7A0602C3875210084B4A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A7A05F2C3875210084B4A7 /* Assets.xcassets */; };
 		38A7A0632C3875210084B4A7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 38A7A0622C3875210084B4A7 /* Base */; };
-		38A7A06E2C3875210084B4A7 /* Banquemisr_challenge05Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A06D2C3875210084B4A7 /* Banquemisr_challenge05Tests.swift */; };
+		38A7A06E2C3875210084B4A7 /* NowPlayingMoviesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A06D2C3875210084B4A7 /* NowPlayingMoviesViewModelTests.swift */; };
 		38A7A0782C3875210084B4A7 /* Banquemisr_challenge05UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0772C3875210084B4A7 /* Banquemisr_challenge05UITests.swift */; };
 		38A7A07A2C3875210084B4A7 /* Banquemisr_challenge05UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0792C3875210084B4A7 /* Banquemisr_challenge05UITestsLaunchTests.swift */; };
 		38A7A0992C3877080084B4A7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7A0872C3877080084B4A7 /* BaseResponse.swift */; };
@@ -78,6 +78,7 @@
 		38ACBECC2C3A9ED40052A9E5 /* GenresCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38ACBECB2C3A9ED40052A9E5 /* GenresCell.xib */; };
 		38ACBECD2C3A9ED40052A9E5 /* GenresCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACBECA2C3A9ED40052A9E5 /* GenresCell.swift */; };
 		38ACBECF2C3A9F020052A9E5 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACBECE2C3A9F020052A9E5 /* UICollectionView.swift */; };
+		38ACBED12C3B32180052A9E5 /* PopularMoviesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACBED02C3B32180052A9E5 /* PopularMoviesViewModelTests.swift */; };
 		895CF5DD9CCF5251D4631A41 /* Pods_Banquemisr_challenge05Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE0C59952FECCAEDD858B4C /* Pods_Banquemisr_challenge05Tests.framework */; };
 		AC8D895B8E2725AEE13BFEA1 /* Pods_Banquemisr_challenge05.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3ED7B07B257C6524411C087 /* Pods_Banquemisr_challenge05.framework */; };
 /* End PBXBuildFile section */
@@ -131,7 +132,7 @@
 		38A7A0622C3875210084B4A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38A7A0642C3875210084B4A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A7A0692C3875210084B4A7 /* Banquemisr.challenge05Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Banquemisr.challenge05Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38A7A06D2C3875210084B4A7 /* Banquemisr_challenge05Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banquemisr_challenge05Tests.swift; sourceTree = "<group>"; };
+		38A7A06D2C3875210084B4A7 /* NowPlayingMoviesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingMoviesViewModelTests.swift; sourceTree = "<group>"; };
 		38A7A0732C3875210084B4A7 /* Banquemisr.challenge05UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Banquemisr.challenge05UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A7A0772C3875210084B4A7 /* Banquemisr_challenge05UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banquemisr_challenge05UITests.swift; sourceTree = "<group>"; };
 		38A7A0792C3875210084B4A7 /* Banquemisr_challenge05UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banquemisr_challenge05UITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 		38ACBECA2C3A9ED40052A9E5 /* GenresCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresCell.swift; sourceTree = "<group>"; };
 		38ACBECB2C3A9ED40052A9E5 /* GenresCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenresCell.xib; sourceTree = "<group>"; };
 		38ACBECE2C3A9F020052A9E5 /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		38ACBED02C3B32180052A9E5 /* PopularMoviesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesViewModelTests.swift; sourceTree = "<group>"; };
 		47659E63DD12BB76880DD019 /* Pods_Banquemisr_challenge05_Banquemisr_challenge05UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Banquemisr_challenge05_Banquemisr_challenge05UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FCF5630E54E991A64BA3E4 /* Pods-Banquemisr.challenge05-Banquemisr.challenge05UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banquemisr.challenge05-Banquemisr.challenge05UITests.debug.xcconfig"; path = "Target Support Files/Pods-Banquemisr.challenge05-Banquemisr.challenge05UITests/Pods-Banquemisr.challenge05-Banquemisr.challenge05UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		61318C892FE514AC2FFFD4F5 /* Pods-Banquemisr.challenge05Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banquemisr.challenge05Tests.debug.xcconfig"; path = "Target Support Files/Pods-Banquemisr.challenge05Tests/Pods-Banquemisr.challenge05Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -526,7 +528,8 @@
 		38A7A06C2C3875210084B4A7 /* Banquemisr.challenge05Tests */ = {
 			isa = PBXGroup;
 			children = (
-				38A7A06D2C3875210084B4A7 /* Banquemisr_challenge05Tests.swift */,
+				38A7A06D2C3875210084B4A7 /* NowPlayingMoviesViewModelTests.swift */,
+				38ACBED02C3B32180052A9E5 /* PopularMoviesViewModelTests.swift */,
 			);
 			path = Banquemisr.challenge05Tests;
 			sourceTree = "<group>";
@@ -1055,7 +1058,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38A7A06E2C3875210084B4A7 /* Banquemisr_challenge05Tests.swift in Sources */,
+				38A7A06E2C3875210084B4A7 /* NowPlayingMoviesViewModelTests.swift in Sources */,
+				38ACBED12C3B32180052A9E5 /* PopularMoviesViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1285,6 +1289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69J7L8UL9S;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -1306,6 +1311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69J7L8UL9S;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -1326,6 +1332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69J7L8UL9S;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohamedaglan.Banquemisr-challenge05UITests";
@@ -1345,6 +1352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69J7L8UL9S;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohamedaglan.Banquemisr-challenge05UITests";

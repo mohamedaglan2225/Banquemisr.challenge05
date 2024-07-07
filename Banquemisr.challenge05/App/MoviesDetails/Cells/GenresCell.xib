@@ -36,11 +36,6 @@
                                     <constraint firstItem="Mwd-ec-Vz3" firstAttribute="leading" secondItem="yJK-kp-WdF" secondAttribute="leading" constant="8" id="bQ9-dV-Qln"/>
                                     <constraint firstItem="Mwd-ec-Vz3" firstAttribute="centerX" secondItem="yJK-kp-WdF" secondAttribute="centerX" id="jOP-l6-jCk"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                     </stackView>
@@ -55,6 +50,7 @@
             </constraints>
             <size key="customSize" width="174" height="56"/>
             <connections>
+                <outlet property="containerStackView" destination="c6d-vP-j8O" id="Sn7-Ao-iih"/>
                 <outlet property="genresTitle" destination="Mwd-ec-Vz3" id="kJz-xF-tqq"/>
             </connections>
             <point key="canvasLocation" x="233.58778625954199" y="21.83098591549296"/>

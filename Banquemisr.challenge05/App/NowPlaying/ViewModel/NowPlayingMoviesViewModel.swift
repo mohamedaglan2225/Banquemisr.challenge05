@@ -8,7 +8,6 @@
 
 import Combine
 
-
 final class NowPlayingMoviesViewModel: BaseViewModel {
     
     //MARK: - Properties -

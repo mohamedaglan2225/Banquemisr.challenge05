@@ -10,6 +10,7 @@ import UIKit
 class GenresCell: UICollectionViewCell {
     
     //MARK: - IBOutLets -
+    @IBOutlet weak var containerStackView: UIStackView!
     @IBOutlet weak var genresTitle: UILabel!
     
     
@@ -20,8 +21,9 @@ class GenresCell: UICollectionViewCell {
     //MARK: - LifeCycle Events -
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        containerStackView.layer.cornerRadius = 8
     }
+    
     
     
     
@@ -29,6 +31,8 @@ class GenresCell: UICollectionViewCell {
     func configureCell(model: Genre) {
         genresTitle.text = model.name
     }
+    
+    
     
 
 }

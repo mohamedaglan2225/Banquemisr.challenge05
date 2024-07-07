@@ -92,7 +92,7 @@ class MovieDetailsView: BaseViewController {
             self.posterImage.setWith("https://image.tmdb.org/t/p/original/\(data.posterPath)")
             self.imagePreview.setWith("https://image.tmdb.org/t/p/original/\(data.backdropPath)")
             self.movieName.text = data.title
-            self.movieStatus.text = data.status
+            self.movieStatus.text = "Movie Status is : \(data.status)"
             self.movieDescrption.text = data.overview
             self.movieRunTime.text = "Movie Run Time : \(data.runtime)"
             self.movieReleaseDate.text = "Movie Release Data : \(data.releaseDate)"
