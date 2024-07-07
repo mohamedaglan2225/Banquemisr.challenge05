@@ -10,7 +10,7 @@ import Foundation
 // MARK: - MovieDetailsModel
 struct MovieDetailsModel: Codable {
     var adult: Bool?
-    var backdropPath: String?
+    var backdropPath: String
     var belongsToCollection: BelongsToCollection?
     var budget: Int?
     var genres: [Genre]?
@@ -20,13 +20,13 @@ struct MovieDetailsModel: Codable {
     var originCountry: [String]?
     var originalLanguage, originalTitle, overview: String?
     var popularity: Double?
-    var posterPath: String?
+    var posterPath: String
     var productionCompanies: [ProductionCompany]?
     var productionCountries: [ProductionCountry]?
-    var releaseDate: String?
-    var revenue, runtime: Int?
+    var releaseDate: String
+    var revenue, runtime: Int
     var spokenLanguages: [SpokenLanguage]?
-    var status, tagline, title: String?
+    var status, tagline, title: String
     var video: Bool?
     var voteAverage: Double?
     var voteCount: Int?

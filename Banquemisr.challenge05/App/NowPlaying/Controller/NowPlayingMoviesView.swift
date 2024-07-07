@@ -101,4 +101,11 @@ extension NowPlayingMoviesView: UITableViewDataSource, UITableViewDelegate {
             viewModel.loadNextPage()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let id = viewModel.nowPlayingMoviesModel.value[indexPath.row].id else {return}
+        let vc = MovieDetailsView.create(movieId: id)
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

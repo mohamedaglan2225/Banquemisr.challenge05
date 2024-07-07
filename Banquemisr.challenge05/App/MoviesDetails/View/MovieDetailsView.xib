@@ -13,8 +13,10 @@
                 <outlet property="genresCollectionView" destination="lvS-az-lxX" id="nYo-qR-EDN"/>
                 <outlet property="imagePreview" destination="iGD-8t-nxG" id="b9A-iR-zCS"/>
                 <outlet property="movieDescrption" destination="Tma-ws-BLi" id="KPk-1n-VCL"/>
+                <outlet property="movieName" destination="4vs-sQ-fKE" id="Le8-wW-OfQ"/>
                 <outlet property="movieReleaseDate" destination="N2Q-ZX-fmP" id="kva-Uo-qBd"/>
                 <outlet property="movieRunTime" destination="0cJ-hQ-sZt" id="AgX-dP-tw9"/>
+                <outlet property="movieStatus" destination="mG7-DR-qdS" id="dyy-sn-nHr"/>
                 <outlet property="posterImage" destination="55B-5l-PcS" id="ak1-uW-HTH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,9 +30,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGd-GQ-3Sg">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="685"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="631"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="55B-5l-PcS">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="55B-5l-PcS">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="240" id="XHa-1Q-LpU"/>
@@ -53,15 +55,20 @@
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iGD-8t-nxG">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iGD-8t-nxG">
                                     <rect key="frame" x="8" y="140" width="140" height="200"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="75X-HS-NoE"/>
                                         <constraint firstAttribute="width" constant="140" id="ZaU-Kc-qNh"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Gty-UQ-7C1">
-                                    <rect key="frame" x="16" y="364" width="382" height="289"/>
+                                    <rect key="frame" x="16" y="364" width="382" height="235"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kQT-1L-mpo">
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="54.5"/>
@@ -81,7 +88,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eLE-rt-oWk">
-                                            <rect key="frame" x="0.0" y="78.5" width="382" height="128.5"/>
+                                            <rect key="frame" x="0.0" y="78.5" width="382" height="74.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1d-5t-DzS">
                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -90,10 +97,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lvS-az-lxX">
-                                                    <rect key="frame" x="0.0" y="28.5" width="382" height="100"/>
+                                                    <rect key="frame" x="0.0" y="28.5" width="382" height="46"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="CWF-OI-HxO"/>
+                                                        <constraint firstAttribute="height" constant="46" id="CWF-OI-HxO"/>
                                                     </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UC9-Ho-Ta4">
                                                         <size key="itemSize" width="128" height="128"/>
@@ -105,13 +112,13 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cJ-hQ-sZt">
-                                            <rect key="frame" x="0.0" y="231" width="382" height="17"/>
+                                            <rect key="frame" x="0.0" y="177" width="382" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2Q-ZX-fmP">
-                                            <rect key="frame" x="0.0" y="272" width="382" height="17"/>
+                                            <rect key="frame" x="0.0" y="218" width="382" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
