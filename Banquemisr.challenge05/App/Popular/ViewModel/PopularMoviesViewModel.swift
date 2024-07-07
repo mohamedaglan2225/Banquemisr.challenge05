@@ -5,6 +5,7 @@
 //  Created by Mohamed Aglan on 7/6/24.
 //
 
+import Foundation
 import Combine
 
 final class PopularMoviesViewModel: BaseViewModel {
@@ -16,6 +17,7 @@ final class PopularMoviesViewModel: BaseViewModel {
     private var isLastPage: Bool = false
     private var currentPage: Int = 1
     private var isFetching: Bool = false
+    private let cacheKey = "PopularMoviesCache"
     var currentPageNumber: Int {
         return currentPage
     }
@@ -35,6 +37,7 @@ final class PopularMoviesViewModel: BaseViewModel {
                 
                 if let moviesData = data.results {
                     self.popularMoviesModel.value.append(contentsOf: moviesData)
+                    saveToCache(movies: self.popularMoviesModel.value)
                 }
                 
                 self.isLastPage = data.page >= data.totalPages
@@ -55,5 +58,29 @@ final class PopularMoviesViewModel: BaseViewModel {
         popularMoviesApi(page: currentPage + 1)
     }
     
+    
+    func loadCachedMovies() {
+        if let cachedMovies = loadFromCache() {
+            self.popularMoviesModel.value = cachedMovies
+        }
+    }
+    
+    
+    private func saveToCache(movies: [PopularMoviesResult]) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(movies) {
+            UserDefaults.standard.set(encoded, forKey: cacheKey)
+        }
+    }
+    
+    private func loadFromCache() -> [PopularMoviesResult]? {
+        if let savedMovies = UserDefaults.standard.object(forKey: cacheKey) as? Data {
+            let decoder = JSONDecoder()
+            if let loadedMovies = try? decoder.decode([PopularMoviesResult].self, from: savedMovies) {
+                return loadedMovies
+            }
+        }
+        return nil
+    }
     
 }

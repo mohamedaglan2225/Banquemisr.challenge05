@@ -12,6 +12,7 @@ class MovieDetailsView: BaseViewController {
     
     
     //MARK: - IBOutLets -
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var movieName: UILabel!
@@ -74,6 +75,7 @@ class MovieDetailsView: BaseViewController {
     private func binding() {
         viewModel.isLoading.sinkOnMain { [weak self] isLoading in
             guard let self = self else {return}
+            isLoading ? (scrollView.alpha = 0) : (scrollView.alpha = 1)
             isLoading ? showIndicator() : hideIndicator()
         }.store(in: &cancellable)
         

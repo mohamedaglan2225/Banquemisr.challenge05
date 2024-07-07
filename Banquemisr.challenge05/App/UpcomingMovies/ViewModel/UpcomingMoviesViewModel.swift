@@ -5,6 +5,7 @@
 //  Created by Mohamed Aglan on 7/6/24.
 //
 
+import Foundation
 import Combine
 
 final class UpcomingMoviesViewModel: BaseViewModel {
@@ -16,6 +17,7 @@ final class UpcomingMoviesViewModel: BaseViewModel {
     private var isLastPage: Bool = false
     private var currentPage: Int = 1
     private var isFetching: Bool = false
+    private let cacheKey = "UpcomingMoviesCache"
     var currentPageNumber: Int {
         return currentPage
     }
@@ -35,6 +37,7 @@ final class UpcomingMoviesViewModel: BaseViewModel {
                 
                 if let moviesData = data.results {
                     self.upcomingMoviesModel.value.append(contentsOf: moviesData)
+                    saveToCache(movies: self.upcomingMoviesModel.value)
                 }
                 
                 self.isLastPage = data.page >= data.totalPages
@@ -53,6 +56,30 @@ final class UpcomingMoviesViewModel: BaseViewModel {
     // MARK: - Helper Functions -
     func loadNextPage() {
         upcomingMoviesApi(page: currentPage + 1)
+    }
+    
+    func loadCachedMovies() {
+        if let cachedMovies = loadFromCache() {
+            self.upcomingMoviesModel.value = cachedMovies
+        }
+    }
+    
+    
+    private func saveToCache(movies: [UpcomingMoviesResult]) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(movies) {
+            UserDefaults.standard.set(encoded, forKey: cacheKey)
+        }
+    }
+    
+    private func loadFromCache() -> [UpcomingMoviesResult]? {
+        if let savedMovies = UserDefaults.standard.object(forKey: cacheKey) as? Data {
+            let decoder = JSONDecoder()
+            if let loadedMovies = try? decoder.decode([UpcomingMoviesResult].self, from: savedMovies) {
+                return loadedMovies
+            }
+        }
+        return nil
     }
     
 }

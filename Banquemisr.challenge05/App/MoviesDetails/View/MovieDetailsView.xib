@@ -18,6 +18,7 @@
                 <outlet property="movieRunTime" destination="0cJ-hQ-sZt" id="AgX-dP-tw9"/>
                 <outlet property="movieStatus" destination="mG7-DR-qdS" id="dyy-sn-nHr"/>
                 <outlet property="posterImage" destination="55B-5l-PcS" id="ak1-uW-HTH"/>
+                <outlet property="scrollView" destination="zzj-EC-UdG" id="gCK-a8-fxo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

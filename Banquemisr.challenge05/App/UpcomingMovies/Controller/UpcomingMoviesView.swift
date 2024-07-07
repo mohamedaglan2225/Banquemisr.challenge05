@@ -101,6 +101,13 @@ extension UpcomingMoviesView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if !NetworkReachability.shared.isConnectedToInternet() {
+            // Show alert if there is no internet connection
+            let alert = UIAlertController(title: "No Internet Connection", message: "Please check your internet connection and try again.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
         guard let id = viewModel.upcomingMoviesModel.value[indexPath.row].id else {return}
         let vc = MovieDetailsView.create(movieId: id)
         vc.hidesBottomBarWhenPushed = true
