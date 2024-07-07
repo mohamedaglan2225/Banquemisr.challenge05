@@ -26,8 +26,9 @@ class NowPlayingMoviesView: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
-        callApis()
         binding()
+        viewModel.loadCachedMovies() // Load cached movies
+        callApis()
     }
     
     init(viewModel: NowPlayingMoviesViewModel = NowPlayingMoviesViewModel()) {

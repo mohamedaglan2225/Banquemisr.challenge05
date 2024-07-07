@@ -5,7 +5,7 @@
 //  Created by Mohamed Aglan on 7/6/24.
 //
 
-
+import Foundation
 import Combine
 
 final class NowPlayingMoviesViewModel: BaseViewModel {
@@ -17,6 +17,7 @@ final class NowPlayingMoviesViewModel: BaseViewModel {
     private var isLastPage: Bool = false
     private var currentPage: Int = 1
     private var isFetching: Bool = false
+    private let cacheKey = "NowPlayingMoviesCache"
     var currentPageNumber: Int {
         return currentPage
     }
@@ -33,6 +34,7 @@ final class NowPlayingMoviesViewModel: BaseViewModel {
                 
                 if let moviesData = data.results {
                     self.nowPlayingMoviesModel.value.append(contentsOf: moviesData)
+                    saveToCache(movies: self.nowPlayingMoviesModel.value)
                 }
                 
                 self.isLastPage = data.page >= data.totalPages
@@ -41,7 +43,6 @@ final class NowPlayingMoviesViewModel: BaseViewModel {
             } catch {
                 errorPublisher.send(error)
             }
-            
             isFetching = false
             isLoading.send(false)
         }
@@ -51,6 +52,31 @@ final class NowPlayingMoviesViewModel: BaseViewModel {
     // MARK: - Helper Functions -
     func loadNextPage() {
         nowPlayingMoviesApi(page: currentPage + 1)
+    }
+    
+    
+    func loadCachedMovies() {
+        if let cachedMovies = loadFromCache() {
+            self.nowPlayingMoviesModel.value = cachedMovies
+        }
+    }
+    
+    
+    private func saveToCache(movies: [NowPlayingModelResult]) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(movies) {
+            UserDefaults.standard.set(encoded, forKey: cacheKey)
+        }
+    }
+    
+    private func loadFromCache() -> [NowPlayingModelResult]? {
+        if let savedMovies = UserDefaults.standard.object(forKey: cacheKey) as? Data {
+            let decoder = JSONDecoder()
+            if let loadedMovies = try? decoder.decode([NowPlayingModelResult].self, from: savedMovies) {
+                return loadedMovies
+            }
+        }
+        return nil
     }
     
 }
